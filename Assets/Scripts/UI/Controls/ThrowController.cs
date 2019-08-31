@@ -44,7 +44,7 @@ public class ThrowController : MonoBehaviour
     {
         throwForce = test.transform.position - inputPoint.position;
         LeanTween.move(test, throwForce, 1);
-        LeanTween.scale(test, test.transform.localScale * 2, 0.5f).setOnComplete(() => LeanTween.scale(test, test.transform.localScale / 2, 0.5f));
+       // LeanTween.scale(test, test.transform.localScale * 2, 0.5f).setOnComplete(() => LeanTween.scale(test, test.transform.localScale / 2, 0.5f));
 
     }
 
