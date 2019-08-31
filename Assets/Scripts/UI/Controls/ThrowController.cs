@@ -42,9 +42,10 @@ public class ThrowController : MonoBehaviour
 
     private void AddThrowForce()
     {
-        throwForce = transform.position - inputPoint.position / (transform.position - inputPoint.transform.position).magnitude;
-        test.GetComponent<Rigidbody2D>().AddForce(throwForce * 100, ForceMode2D.Impulse);
-        Debug.Log(throwForce);
-        OnThrow?.Invoke(Vector2.zero);
+        throwForce = test.transform.position - inputPoint.position;
+        LeanTween.move(test, throwForce, 1);
+        LeanTween.scale(test, test.transform.localScale * 2, 0.5f).setOnComplete(() => LeanTween.scale(test, test.transform.localScale / 2, 0.5f));
+
     }
+
 }
