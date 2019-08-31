@@ -1,5 +1,5 @@
 ﻿/// <summary>
-/// Глобальный класс с всеми константами, которые нужны в игре
+/// Global game constants class
 /// </summary>
 public static class Constants
 {
