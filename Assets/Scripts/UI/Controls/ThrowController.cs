@@ -44,7 +44,7 @@ public class ThrowController : MonoBehaviour
     {
         throwForce = test.transform.position - inputPoint.position;
         LeanTween.move(test, throwForce, 0.5f);
-        test.GetComponent<Animator>().Play("Jump");
+       // test.GetComponent<Animator>().Play("Jump");
         LeanTween.scale(test, test.transform.localScale * 1.25f, 0.25f).setOnComplete(() => LeanTween.scale(test, test.transform.localScale / 1.25f, 0.25f));
 
     }
