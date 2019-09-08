@@ -50,6 +50,16 @@ public class Player : MonoBehaviour
     public void VectorJump(Vector2 vector)
     {
         jumpVector = vector;
+        GetComponent<Animator>().Play("MainAnimator");
+        if (vector.x < 0)
+        {
+            transform.eulerAngles = new Vector3(0, 180, 0);
+        }
+        else
+        {
+            transform.eulerAngles = new Vector3(0, 0, 0);
+        }
+
         jump = true; 
     }
 }
